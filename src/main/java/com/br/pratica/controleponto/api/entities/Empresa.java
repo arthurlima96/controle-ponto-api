@@ -23,10 +23,10 @@ public class Empresa implements Serializable{
 	private static final long serialVersionUID = -2384620472078603666L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)		
+	@GeneratedValue(strategy = GenerationType.IDENTITY)		
 	private Long id;
 	
-	@Column(name = "raxao_social", nullable = false)
+	@Column(name = "razao_social", nullable = false)
 	private String razaoSocial;
 	
 	@Column(name = "cnpj", nullable = false)
@@ -35,7 +35,7 @@ public class Empresa implements Serializable{
 	@Column(name = "data_criacao", nullable = false)
 	private LocalDate dataCriacao;
 	
-	@Column(name = "data_atualiazacao", nullable = false)
+	@Column(name = "data_atualizacao", nullable = false)
 	private LocalDate dataAtualizacao;
 	
 	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

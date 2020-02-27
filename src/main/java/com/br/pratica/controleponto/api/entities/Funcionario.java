@@ -29,7 +29,7 @@ public class Funcionario implements Serializable{
 	private static final long serialVersionUID = -4822412941655353592L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Long id;
 	
 	@Column(name = "nome",nullable = false)
@@ -60,7 +60,7 @@ public class Funcionario implements Serializable{
 	@Column(name = "data_criacao", nullable = false)
 	private LocalDate dataCriacao;
 	
-	@Column(name = "data_atualiazacao", nullable = false)
+	@Column(name = "data_atualizacao", nullable = false)
 	private LocalDate dataAtualizacao;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
