@@ -22,17 +22,17 @@ public class ControlePontoApplication {
 		SpringApplication.run(ControlePontoApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(){
-		return args-> {
-			Empresa empresa = new Empresa();
-			empresa.setRazaoSocial("Arthur LTDA");
-			empresa.setCnpj("38839109000190");
-			
-			this.empresaRepository.save(empresa);
-			
-			List<Empresa> empresas = empresaRepository.findAll();
-			empresas.forEach(System.out::println);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(){
+//		return args-> {
+//			Empresa empresa = new Empresa();
+//			empresa.setRazaoSocial("Arthur LTDA");
+//			empresa.setCnpj("38839109000190");
+//			
+//			this.empresaRepository.save(empresa);
+//			
+//			List<Empresa> empresas = empresaRepository.findAll();
+//			empresas.forEach(System.out::println);
+//		};
+//	}
 }
